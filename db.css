@@ -1,0 +1,126 @@
+.container {
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #72a16b;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face.back {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.face.back b {
+  margin: 0;
+  padding: 0;
+}
+
+.face.back .desc {
+  background-color: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.face.front {
+  transition: 0.5s;
+}
+
+.face.front b {
+  margin: 0;
+  padding: 0;
+  font-size: 5.1em;
+  color: #0a0a0a;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.card:hover .face.front {
+  height: 60px;
+}
+
+.card:hover .face.front b {
+  font-size: 2em;
+}
+
+.face.front {
+  background-color: #34812a;
+  border-radius: 15px;
+}
+
+.cssbuttons-io-button {
+  position: relative;
+  left: 580px;
+  top: 50px;
+  background: #34812a;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #34812a;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #34812a;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #34812a;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
